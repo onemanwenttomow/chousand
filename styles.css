@@ -3,7 +3,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -13,9 +13,10 @@ body {
 
 h1 {
     font-family: 'Permanent Marker', cursive;
-    font-size: 12em;
+    font-size: 15vw;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    text-align: center;
 }
 
 h2 {
@@ -55,10 +56,34 @@ video {
     transition: 1s opacity;
 }
 
+nav {
+    align-self: end;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+nav > ul {
+    padding: 0;
+}
+nav > ul > li {
+    margin-top: 10px;
+}
+
+a > li {
+    margin-top: 10px;
+}
+
+dialog {
+    min-width: 100vw;
+    min-height: 100vh;
+    border: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content 1fr;
+    margin: 0 1vw;
 }
 
 .album-container {
@@ -78,6 +103,18 @@ video {
     padding: 10px;
     text-transform: uppercase;
     margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+
+.social {
+    padding: 0;
+    margin-top: 20px;
+}
+
+.social > li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 #btn {

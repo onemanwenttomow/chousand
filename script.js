@@ -4,7 +4,7 @@ var vid = document.getElementById('bgvid');
 var playBtn = document.getElementById('btn');
 console.log(playBtn);
 
-document.getElementsByClassName('container')[0].addEventListener("click", function(e) {
+document.querySelector('h1').addEventListener("click", function(e) {
     e.stopPropagation();
     console.log("clicked");
     vid.paused ? vid.play() : vid.pause();
@@ -16,7 +16,7 @@ setTimeout(function(){
         vid.play();
         vid.muted = true;
     }
-},300);
+}, 500);
 
 playBtn.addEventListener("click", function() {
     if (vid.muted === false) {
@@ -26,4 +26,16 @@ playBtn.addEventListener("click", function() {
         vid.muted = false;
         playBtn.innerHTML = '<i id="play" class="fas fa-volume-up fa-4x"></i>';
     }
+});
+
+const dialog = document.getElementById('dialog');
+const openBtn = document.getElementById('tourbtn');
+const closeBtn = document.getElementById('closeBtn');
+
+openBtn.addEventListener('click', function() {
+    dialog.setAttribute('open', true);
+});
+
+closeBtn.addEventListener('click', function() {
+    dialog.removeAttribute('open');
 });
