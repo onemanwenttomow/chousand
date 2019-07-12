@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (vid.paused) {
             vid.play();
         }
-    }, 500);
+    }, 50);
 
     playBtn.addEventListener("click", function() {
         if (vid.muted === false) {
