@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(function(){
         console.log("timeout");
+        vid.muted = true;
         if (vid.paused) {
             vid.play();
-            vid.muted = true;
         }
     }, 500);
 
